@@ -41,6 +41,7 @@ a {
 
 img {
   width: 100%;
+  grid-row: ;
 }
 
 .contenedor {
@@ -240,10 +241,21 @@ h3 {
 }
 
 .formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
 }
 
 .formulario__campo {
-}
+  border: 1rem solid var(--primarioOscuro);
+  background-color: transparent;
+  color: var(--blanco);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  /* appearance: none; para eliminar la flecha hacia abajo*/
+} 
 
 .formulario__submit {
   background-color: var(--secundario);
@@ -252,6 +264,7 @@ h3 {
   font-family: var(--fuentePrincipal);
   padding: 2rem;
   transition: background-color 0.3s ease;
+  grid-column: 1 / 3; /* para posicionar columnas en coordenadas especificas*/
 }
 
 .formulario__submit:hover {
